@@ -9,6 +9,7 @@
 <body>
     <header>
         <a href="{% url 'form_app:form' %}">生徒追加</a>
+        <a href="{% url 'form_app:insert_multiple_students' %}">生徒一括追加</a>
         <a href="{% url 'form_app:students_list' %}">生徒一覧</a>
     </header>
     {% block content %}
