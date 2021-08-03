@@ -58,3 +58,7 @@ class StudentsUpdateForm(forms.Form):
     class Meta:
         model = Students
         fields = '__all__'
+
+
+class StudentDeleteForm(forms.Form):
+    id = forms.IntegerField(widget=forms.HiddenInput)  # 画面に表示しないで扱う指定

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}生徒削除画面{{ block.super }}{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <table>
+        {{ delete_form.as_table }}
+    </table>
+    <input type="submit" value="削除する">
+</form>
+{% endblock %}
