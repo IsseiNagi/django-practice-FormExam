@@ -32,3 +32,29 @@ class StudentsModelForm(forms.ModelForm):
     class Meta:
         model = Students
         fields = '__all__'
+
+
+class StudentsUpdateForm(forms.Form):
+    name = forms.CharField(
+        label='名前',
+        max_length=10,
+        min_length=3,
+        widget=forms.TextInput(attrs={
+            'placeholder': '名前を入力してください'
+        })
+    )
+    age = forms.IntegerField(
+        label='年齢',
+        widget=forms.TextInput(attrs={
+            'placeholder': '年齢を入力してください'
+        })
+    )
+    grade = forms.IntegerField(
+        label='学年',
+        validators=[check_grade]
+        )
+    picture = forms.FileField(label='本人写真', required=False)
+
+    class Meta:
+        model = Students
+        fields = '__all__'

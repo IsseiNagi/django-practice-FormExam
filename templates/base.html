@@ -7,6 +7,10 @@
     <title>{% block title %}Students Manager{% endblock %}</title>
 </head>
 <body>
+    <header>
+        <a href="{% url 'form_app:form' %}">生徒追加</a>
+        <a href="{% url 'form_app:students_list' %}">生徒一覧</a>
+    </header>
     {% block content %}
     {% endblock %}
 </body>
