@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Insert Form{{ block.super }}{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="送信">
+</form>
+{% endblock %}
